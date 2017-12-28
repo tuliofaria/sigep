@@ -1,6 +1,6 @@
 {
   "name": "sigep",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "SIGEP-WebService (Correios - Brazillian postoffice)",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
     "url": "git://github.com/tuliofaria/sigep.git"
   },
   "author": "Tulio Faria",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "soap": "^0.23.0"
+  }
 }
