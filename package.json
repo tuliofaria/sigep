@@ -1,6 +1,6 @@
 {
   "name": "sigep",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "SIGEP-WebService (Correios - Brazillian postoffice)",
   "main": "index.js",
   "scripts": {
