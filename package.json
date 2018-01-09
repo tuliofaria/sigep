@@ -4,7 +4,8 @@
   "description": "SIGEP-WebService (Correios - Brazillian postoffice)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec lib/*.test.js",
+    "coverage": "nyc mocha --reporter spec lib/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,11 @@
   "license": "MIT",
   "dependencies": {
     "soap": "^0.23.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1",
+    "sinon": "^4.1.3"
   }
 }
