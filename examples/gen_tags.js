@@ -1,18 +1,13 @@
-var sigep = require('../index')
+var { solicitaEtiquetas } = require('../index')
 
-sigep('prod', {
+const meuUsuario = {
   usuario: '<usuario>',
   senha: '<senha>'
-})
-  .then(function(sigepClient){
-    // codigo sedex
-    const sedex = '124849'
-    sigepClient
-      .solicitaEtiquetas('<cnpj>', 5, sedex)
-      .then( etiquetas => {
-        console.log(etiquetas)
-      })
-  })
-  .catch(function(err){
-    console.log(err)
-  })
+}
+const cnpj = '<cnpj>'
+const qtdeSolicitada = 5
+const codSedex = '124849'
+
+solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
+  .then(etiquetas => console.log(etiquetas))
+  .catch(err => console.log(err))
