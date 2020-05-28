@@ -8,11 +8,15 @@ Link Correios: http://www.corporativo.correios.com.br/encomendas/sigepweb/doc/Ma
 # CONSULTA CEP
 ## Modo de Uso
 ```
-var { consultaCEP } = require('../index')
+import { consultaCEP } from 'sigep'
 
 consultaCEP('prod', '37552171')
   .then(address => console.log(address))
   .catch(err => console.log(err))
+```
+Ou usando async/await:
+```
+await consultaCEP('prod', '37552171')
 ```
 
 ### Retorno
@@ -36,19 +40,31 @@ consultaCEP('prod', '37552171')
 # SOLICITA ETIQUETAS
 ## Modo de Uso
 ```
-var { solicitaEtiquetas } = require('../index')
+import { solicitaEtiquetas } from 'sigep'
 
 const meuUsuario = {
   usuario: '<usuario>',
   senha: '<senha>'
 }
 const cnpj = '<cnpj>'
-const qtdeSolicitada = 5
+const qtdeSolicitada = 2
 const codSedex = '124849'
 
 solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
   .then(etiquetas => console.log(etiquetas))
   .catch(err => console.log(err))
+```
+
+Ou usando async/await:
+```
+await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
+```
+
+### Retorno
+```
+[
+  'PY23232323BR', 'PY23231524BR'
+]
 ```
 
 ### Projeto Exemplo
@@ -57,5 +73,9 @@ solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
     node examples/gen_tags.js
 ```
 
-## CONTRIBUIÇÕES
+
+# TESTES
+## [Não atualizado]
+
+# CONTRIBUIÇÕES
 Fique à vontade para sugerir/realizar alterações. Mande-nos um Pull Request =)
