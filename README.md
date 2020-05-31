@@ -3,6 +3,9 @@
 ## SOBRE
 - Projeto desenvolvido em NodeJS utilizando async/await e Promises para utilização dos serviços 'ConsultaCEP' e 'SolicitaEtiquetas' dos correios.
 
+## IMPORTANTE
+- As etiquetas têm prazo de validade, portanto, os correios não permitem gerar aos sábados e domingos.
+
 Link Correios: http://www.corporativo.correios.com.br/encomendas/sigepweb/doc/Manual_de_Implementacao_do_Web_Service_SIGEP_WEB.pdf
 
 # CONSULTA CEP
