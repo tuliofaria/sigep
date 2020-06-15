@@ -83,6 +83,16 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
 # CONTRIBUIÇÕES
 - v2: Renato Siqueira [@renatosiqueira](https://github.com/renatosiqueira)
 
+# Colaboradores:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
 # OUTRAS INFORMAÇÕES
 Fique à vontade para sugerir/realizar alterações. Mande-nos um Pull Request =)
