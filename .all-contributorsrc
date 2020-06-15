@@ -25,6 +25,16 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "tuliofaria",
+      "name": "Tulio Faria",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/103433?v=4",
+      "profile": "https://tuliofaria.dev",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "projectName": "sigep",
