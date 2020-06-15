@@ -16,21 +16,21 @@
   },
   "skipCi": true,
   "contributors": [
-    {
-      "login": "RenatoSiqueira",
-      "name": "Renato Siqueira",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/30542215?v=4",
-      "profile": "https://renatosiqueira.dev/",
+      {
+      "login": "tuliofaria",
+      "name": "Tulio Faria",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/103433?v=4",
+      "profile": "https://tuliofaria.dev",
       "contributions": [
         "code",
         "test"
       ]
     },
     {
-      "login": "tuliofaria",
-      "name": "Tulio Faria",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/103433?v=4",
-      "profile": "https://tuliofaria.dev",
+      "login": "RenatoSiqueira",
+      "name": "Renato Siqueira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/30542215?v=4",
+      "profile": "https://renatosiqueira.dev/",
       "contributions": [
         "code",
         "test"
