@@ -90,8 +90,9 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://renatosiqueira.dev/"><img src="https://avatars1.githubusercontent.com/u/30542215?v=4" width="100px;" alt=""/><br /><sub><b>Renato Siqueira</b></sub></a></td>
     <td align="center"><a href="https://tuliofaria.dev"><img src="https://avatars3.githubusercontent.com/u/103433?v=4" width="100px;" alt=""/><br /><sub><b>Tulio Faria</b></sub></a></td>
+    <td align="center"><a href="https://renatosiqueira.dev/"><img src="https://avatars1.githubusercontent.com/u/30542215?v=4" width="100px;" alt=""/><br /><sub><b>Renato Siqueira</b></sub></a></td>
+    <td align="center"><a href="https://github.com/DanielJ06"><img src="https://avatars0.githubusercontent.com/u/56522385?v=4" width="100px;" alt=""/><br /><sub><b>Daniel de Jesus</b></sub></a></td>
   </tr>
 </table>
 
