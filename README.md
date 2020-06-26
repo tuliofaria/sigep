@@ -80,9 +80,6 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
 # TESTES
 ## [Não atualizado]
 
-# CONTRIBUIÇÕES
-- v2: Renato Siqueira [@renatosiqueira](https://github.com/renatosiqueira)
-
 # COLABORADORES:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
