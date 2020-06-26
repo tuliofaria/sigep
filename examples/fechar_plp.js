@@ -8,7 +8,6 @@ const meuUsuario = {
     senha: 'n5f9t8',
     cartaoPostagem: '0067599079'
 }
-const cartaoPostagem = '0067599079'
 const numeroContrato = '9992157880'
 const numeroDiretoria = '10'
 const codigoAdministrativo = '17000190'
@@ -24,10 +23,15 @@ const telefoneRemetente = '4133332222'
 const faxRemetente = ''
 const emailRemetente = 'teste@email.com'
 
+// Pre-Requisito:
+// Preparar Etiquetas com Dígito Verificador Previamente (vide exemplo gerar_digito)
+const etiquetas = ['DL61145929 BR']
+let validEtiquetas = ['DL611459292BR']
+
+
 // Lista de Destinatários
 const listaObjetosPostais = [
     {
-        numEtiqueta: 'PH185560916BR',
         codServicoPostagem: '04669',
         cubagem: '0,00',
         peso: '2500',
@@ -56,6 +60,7 @@ const listaObjetosPostais = [
     }
 ]
 
+
 const prepareString = item => {
     return item.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 }
@@ -64,7 +69,7 @@ let xml =
     '<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>' +
     '<correioslog><tipo_arquivo>Postagem</tipo_arquivo><versao_arquivo>2.3</versao_arquivo>' +
     '<plp><id_plp /><valor_global/><mcu_unidade_postagem/><nome_unidade_postagem/>' +
-    '<cartao_postagem>' + cartaoPostagem + '</cartao_postagem></plp>' +
+    '<cartao_postagem>' + meuUsuario.cartaoPostagem + '</cartao_postagem></plp>' +
     '<remetente><numero_contrato>' + numeroContrato + '</numero_contrato>' +
     '<numero_diretoria>' + numeroDiretoria + '</numero_diretoria>' +
     '<codigo_administrativo>' + codigoAdministrativo + '</codigo_administrativo>' +
@@ -82,11 +87,7 @@ let xml =
     '</remetente><forma_pagamento/>'
 
 let destinatario = ''
-const etiquetas = []
-
-listaObjetosPostais.forEach(each => {
-
-    etiquetas.push(each.numEtiqueta)
+listaObjetosPostais.forEach((each, index) => {
 
     const name = prepareString(each.nome)
     const complement = prepareString(each.complemento)
@@ -96,7 +97,7 @@ listaObjetosPostais.forEach(each => {
 
     destinatario +=
         '<objeto_postal>' +
-        '<numero_etiqueta>' + each.numEtiqueta + '</numero_etiqueta>' +
+        '<numero_etiqueta>' + validEtiquetas[index] + '</numero_etiqueta>' +
         '<codigo_objeto_cliente/>' +
         '<codigo_servico_postagem>' + each.codServicoPostagem + '</codigo_servico_postagem>' +
         '<cubagem>' + each.cubagem + '</cubagem>' +

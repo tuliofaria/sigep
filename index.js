@@ -50,6 +50,43 @@ const solicitaEtiquetas = async (env, newCredentials, identificador, qtdEtiqueta
   })
 }
 
+const geraDigitoVerificador = async (env, newCredentials, etiquetas) => {
+  const client = await soapClient(env)
+
+  const credentials = {
+    usuario: 'sigep',
+    senha: 'n5f9t8'
+  }
+
+  if (newCredentials) {
+    credentials.usuario = newCredentials.usuario
+    credentials.senha = newCredentials.senha
+  }
+
+  const requestData = {
+    etiquetas,
+    usuario: credentials.usuario,
+    senha: credentials.senha
+  }
+
+  return new Promise((resolve, reject) => {
+    client.geraDigitoVerificadorEtiquetas(requestData, async (err, result) => {
+      if (err) {
+        reject(err.root.Envelope.Body.Fault.faultstring)
+          ? { error: err.root.Envelope.Body.Fault.faultstring }
+          : err
+      } else {
+        const digitos = result.return
+        const validTickets = requestData.etiquetas
+          .map((each, index) => each.replace(/\s/g, digitos[index]))
+        resolve(validTickets)
+      }
+    })
+  })
+
+}
+
+
 const fechaPlpVariosServicos = async (env, xml, listaEtiquetas, newCredentials) => {
   const client = await soapClient(env)
 
@@ -92,5 +129,6 @@ const fechaPlpVariosServicos = async (env, xml, listaEtiquetas, newCredentials) 
 module.exports = {
   consultaCEP,
   solicitaEtiquetas,
+  geraDigitoVerificador,
   fechaPlpVariosServicos
 }
