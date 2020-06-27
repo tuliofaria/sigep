@@ -102,13 +102,13 @@ const fechaPlpVariosServicos = async (env, xml, listaEtiquetas, newCredentials) 
     credentials.cartaoPostagem = newCredentials.cartaoPostagem
   }
 
-  const idPlpCliente = Date.now()
+  const idPlpCliente = Date.now().toString().substring(0, 10)
 
   const requestData = {
     xml,
     idPlpCliente,
-    listaEtiquetas,
     cartaoPostagem: credentials.cartaoPostagem,
+    listaEtiquetas,
     usuario: credentials.usuario,
     senha: credentials.senha
   }

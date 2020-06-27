@@ -25,14 +25,40 @@ const emailRemetente = 'teste@email.com'
 
 // Pre-Requisito:
 // Preparar Etiquetas com Dígito Verificador Previamente (vide exemplo gerar_digito)
-const etiquetas = ['DL61145929 BR']
-let validEtiquetas = ['DL611459292BR']
-
+const etiquetas = ['SO00064196BR', 'SL99922179BR']
+let validEtiquetas = ['SO000641962BR', 'SL999221795BR']
 
 // Lista de Destinatários
 const listaObjetosPostais = [
     {
-        codServicoPostagem: '04669',
+        codServicoPostagem: '04596',
+        cubagem: '0,00',
+        peso: '2500',
+        nome: 'Fulano',
+        telefone: '6233332222',
+        celular: '61999991111',
+        email: '',
+        logradouro: 'Rua Central',
+        complemento: 'Qd: 102',
+        numero: '8065',
+        bairro: 'Setor Industrial',
+        cidade: 'Goiânia',
+        uf: 'GO',
+        cep: '74503100',
+        nf: '1424',
+        descricaoObjeto: '',
+        valorCobrar: '0,0',
+        servicoAdicional: '25',
+        valorDeclarado: '200,00',
+        tipoObjeto: '002',
+        dimensaoAltura: '8',
+        dimensaoLargura: '20',
+        dimensaoComprimento: '16',
+        dimensaoDiametro: '0',
+        statusProcessamento: '0'
+    },
+    {
+        codServicoPostagem: '04596',
         cubagem: '0,00',
         peso: '2500',
         nome: 'Fulano',
@@ -135,6 +161,7 @@ listaObjetosPostais.forEach((each, index) => {
 })
 
 xml += destinatario + '</correioslog>'
+
 
 fechaPlpVariosServicos(env, xml, etiquetas, meuUsuario)
     .then(result => console.log(result))
