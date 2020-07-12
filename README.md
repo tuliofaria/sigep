@@ -76,6 +76,9 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
     node examples/gen_tags.js
 ```
 
+# TO-DO
+- Atualizar o ReadME com as novas funcionalidades (geraDigitoVerificador e fechaPlpVariosServicos)
+- Testar os novos exemplos adicionados
 
 # TESTES
 ## [Não atualizado]
