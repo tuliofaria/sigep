@@ -1,5 +1,7 @@
-var { consultaCEP } = require('../index')
+const { consultaCEP } = require('../index')
 
-consultaCEP('dev', '37552171')
+const env = 'dev' // Em modo de produção, use "prod"
+
+consultaCEP(env, '37552171')
   .then(address => console.log(address))
   .catch(err => console.log(err))

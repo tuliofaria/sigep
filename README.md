@@ -1,10 +1,10 @@
 # SIGEP Integration
 
 ## SOBRE
-- Projeto desenvolvido em NodeJS utilizando async/await e Promises para utilização dos serviços 'ConsultaCEP' e 'SolicitaEtiquetas' dos correios.
+- Projeto desenvolvido em NodeJS utilizando async/await e Promises para utilização dos serviços 'ConsultaCEP', 'SolicitaEtiquetas' e 'FechaPlpVariosServicos' dos correios.
 
 ## IMPORTANTE
-- As etiquetas têm prazo de validade, portanto, os correios não permitem gerar aos sábados e domingos.
+- As etiquetas têm prazo de validade, portanto, não recomendamos gerar aos finais de semana.
 
 Link Correios: http://www.corporativo.correios.com.br/encomendas/sigepweb/doc/Manual_de_Implementacao_do_Web_Service_SIGEP_WEB.pdf
 
@@ -76,14 +76,14 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
     node examples/gen_tags.js
 ```
 
+# TO-DO
+- Atualizar o README com as novas funcionalidades (geraDigitoVerificador e fechaPlpVariosServicos)
+- Testar os novos exemplos adicionados
 
 # TESTES
 ## [Não atualizado]
 
-# CONTRIBUIÇÕES
-- v2: Renato Siqueira [@renatosiqueira](https://github.com/renatosiqueira)
-
-# Colaboradores:
+# COLABORADORES:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
