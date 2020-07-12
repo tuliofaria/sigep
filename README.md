@@ -77,7 +77,7 @@ await solicitaEtiquetas('prod', meuUsuario, cnpj, qtdeSolicitada, codSedex)
 ```
 
 # TO-DO
-- Atualizar o ReadME com as novas funcionalidades (geraDigitoVerificador e fechaPlpVariosServicos)
+- Atualizar o README com as novas funcionalidades (geraDigitoVerificador e fechaPlpVariosServicos)
 - Testar os novos exemplos adicionados
 
 # TESTES
